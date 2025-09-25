@@ -41,6 +41,7 @@
     <div class="tabs-viewport">
       <ul>
         <li><a href="#about" class="active">About Me</a></li>
+        <li><a href="#internship">Internship Experience</a></li>
         <li><a href="#dc-snap">DC SNAP Retailer Map</a></li>
         <li><a href="#sfd-911">Seattle 911 Dispatch Dashboard</a></li>
         <li><a href="#election">Election Story Map</a></li>
@@ -63,16 +64,10 @@
       <div class="about-layout">
         <div class="about-text">
           <p>
-            I am Owen McKearn, a geospatial data scientist with a BA in Geography
-            (Data Science concentration) from the University of Washington. My work
-            combines technical skills in Python, ArcGIS, and machine learning with a
-            focus on solving real-world spatial problems. I have automated large-scale
-            geodatabases at Freeport McMoRan, built interactive web maps, and developed
-            classification models. I enjoy working where data, technology, and communication
-            meet, creating clear and useful visuals and tools for both technical and
-            non-technical audiences. I am now seeking new opportunities and open to
-            freelance projects where I can apply my skills to create practical geospatial
-            solutions.
+            I am Owen McKearn, a geospatial data scientist with a BA in Geography (Data Science concentration) from the University of Washington. My academic background includes coursework in data structures and algorithms, machine learning, remote sensing, and GIS database management, giving me a strong technical foundation in both computer science and spatial analysis.
+          </p>
+          <p>
+            I recently worked as a GIS Analyst Intern on the Enterprise GIS Team at Freeport-McMoRan, where I automated imagery workflows, managed enterprise geodatabases, and developed Python tools to streamline data processing and mining claim updates. Since then, I have been pursuing freelance projects, building interactive web maps, processing drone imagery, and applying remote sensing techniques to real-world problems. My focus is on combining data science, mapping technologies, and clear design to create tools that turn complex spatial data into actionable insights.
           </p>
 
           <div class="contact-cards">
@@ -86,6 +81,32 @@
           <img class="about-photo" src="img/headshot.JPG" alt="Headshot of Owen McKearn">
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Internship Experience -->
+  <section id="internship" class="section reveal">
+    <div class="container">
+      <h2>Internship Experience – Freeport‑McMoRan</h2>
+      <p>
+        During my internship with the Enterprise GIS Team at Freeport‑McMoRan, I worked on high‑impact projects that improved data accuracy, accessibility, and visualization across multiple sites. These experiences strengthened my technical skills in spatial data management, automation, and cartographic storytelling while supporting enterprise‑level decision‑making.
+      </p>
+      <h3>Key Projects</h3>
+      <ul class="tight">
+        <li><strong>PTFI Time‑Enabled Imagery Mosaic</strong> – Built a dynamic, time‑enabled mosaic dataset for the PTFI site, complete with optimized overviews and trimming. This tool allows teams to monitor tailings over time, directly supporting environmental stewardship and regulatory compliance. I also developed Python scripts to automate conversion of raw TIFFs into cloud‑optimized formats, dramatically improving imagery performance for the Tailings team.</li>
+        <li><strong>Bagdad Story Map</strong> – Co‑developed an ArcGIS StoryMap for the Director of Land, synthesizing deeds, leases, water exchange deals, and spatial data into a compelling narrative with embedded maps and animations. This high‑level communication tool showcased the long‑term value of land and water investments and was prepared for presentation at the Land and Water Summit.</li>
+        <li><strong>Utility Infrastructure Digitization (City of Ajo)</strong> – Digitized critical infrastructure, including sewer taps, fire hydrants, and power lines, from PDF diagrams into GIS. Uploaded to the enterprise portal, this data improved accessibility and reliability for city utility operations, maintenance, and planning.</li>
+        <li><strong>Enterprise Mining Claims Dataset</strong> – Reviewed, validated, and cleaned more than 13,000 unpatented mining claims by cross‑referencing Bureau of Land Management records, deeds, and legal filings. Created a centralized, cloud‑hosted “single source of truth” dataset that supports exploration, permitting, legal, and land management teams across the company.</li>
+        <li><strong>Portal Item Cleanup & Feature Digitization</strong> – Conducted system‑wide cleanup of outdated portal items and digitized CAD/PDF features for enterprise upload, ensuring streamlined data management and accessibility across teams.</li>
+      </ul>
+      <h3>Impact</h3>
+      <p>These projects highlight my ability to:</p>
+      <ul class="tight">
+        <li>Automate imagery and data workflows with Python.</li>
+        <li>Transform raw records and documents into actionable enterprise datasets.</li>
+        <li>Build high‑quality visualizations (StoryMaps, mosaics, cartographic layouts) for both technical and executive audiences.</li>
+        <li>Collaborate across departments to deliver tools that improve efficiency, accuracy, and communication.</li>
+      </ul>
     </div>
   </section>
 
@@ -206,6 +227,35 @@
         needed. These maps can support non-profits and government agencies in targeting interventions in
         underserved communities.
       </p>
+      <div class="slider" aria-roledescription="carousel" aria-label="Seattle Health Equity maps">
+        <button class="slider-btn prev" aria-label="Previous image" type="button">‹</button>
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/1Health_2_Z%20Layout.jpeg.jpg" alt="Seattle health equity map 1">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/2Health_5_Z%20Layout.jpeg.jpg" alt="Seattle health equity map 2">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/3Health_6_Z%20Layout.jpeg.jpg" alt="Seattle health equity map 3">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/4Health_7_Z%20Layout.jpeg.jpg" alt="Seattle health equity map 4">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/5Health_8_Z%20Layout.jpeg.jpg" alt="Seattle health equity map 5">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/6Custom%20Index%20Layout.jpeg.jpg" alt="Seattle health equity map 6">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/7Weighted%20Index%20Layout.jpeg.jpg" alt="Seattle health equity map 7">
+            </article>
+          </div>
+        </div>
+        <button class="slider-btn next" aria-label="Next image" type="button">›</button>
+      </div>
     </div>
   </section>
 
@@ -214,11 +264,18 @@
     <div class="container">
       <h2>D.C. Crime</h2>
       <p>
-        This project uses a heat map to display crime in Washington, D.C. during 2024. Built with Esri ArcGIS Online,
-        it showcases how web GIS can quickly turn open data into interactive insight. The map allows
-        users to zoom in and see patterns at the block level, offering insights into crime distribution across
-        the city.
+        This project explores patterns of crime in Washington, D.C. using publicly available data from the city’s Open Data Portal. I cleaned and processed incident-level records, then built an interactive web map in ArcGIS Online that allows users to zoom into neighborhoods, filter by category, and view spatial patterns at both the citywide and block level. The web map demonstrates how open data and web GIS can provide accessible insight into public safety trends.
       </p>
+      <p>
+        To complement the interactive map, I also produced two cartographic layouts in ArcGIS Pro. The first is a proportional symbol map, where circle sizes represent the number of incidents by location, making it easy to compare concentrations across the city. The second is a choropleth map that aggregates incidents by neighborhood boundaries, providing a normalized view of crime density and distribution. Together, these products highlight my ability to combine web GIS tools with traditional cartography, ensuring that the analysis is both interactive and publication-ready.
+      </p>
+      <p>
+        This project demonstrates skills in data acquisition, cleaning, and visualization across multiple GIS platforms. By using both ArcGIS Online and ArcGIS Pro, I show how spatial data can be tailored to different audiences: decision-makers who need high-level summaries and community members who benefit from an interactive way to explore crime data.
+      </p>
+      <div class="image-row" aria-label="D.C. Crime static maps">
+        <img class="zoomable" src="dcCrime/CrimeChoropleth.jpg" alt="D.C. crime choropleth map">
+        <img class="zoomable" src="dcCrime/crimeProport.jpg" alt="D.C. crime proportional symbol map">
+      </div>
       <div class="embed interact">
         <button class="embed-guard" aria-label="Click to interact with this map"><span class="embed-guard-label">Click to interact</span></button>
         <iframe
@@ -261,6 +318,8 @@
         This work links quantitative analysis with clear mapping. It shows not just where poverty is
         concentrated, but also how reliable the estimates are.
       </p>
+      <object data="seaPov/KCPoverty.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="King County Poverty map PDF"></object>
+      <p class="slide-caption"><a class="link" href="seaPov/KCPoverty.pdf" target="_blank" rel="noopener">Open full PDF</a></p>
     </div>
   </section>
 
@@ -269,17 +328,12 @@
     <div class="container">
       <h2>Digital Terrain Model</h2>
       <p>
-        This project analyzed changes in canopy height and digital terrain models before and after a flood
-        using LiDAR data. The steps included importing and processing pre- and post-flood LiDAR datasets,
-        creating canopy height models, calculating differences in canopy height and terrain, and visualizing
-        the results with raster differencing and histograms.
+        I processed pre- and post-flood LiDAR datasets to evaluate changes in canopy height and terrain elevation, applying raster differencing to identify areas most impacted by flooding. The workflow involved generating canopy height models (CHMs) and digital terrain models (DTMs), validating coordinate systems and resolutions, and ensuring data quality by checking for null values. I then created difference rasters, plotted histograms to guide classification, and visualized spatial patterns of canopy loss, terrain shifts, and potential flood damage.
       </p>
       <p>
-        The analysis shows how flooding altered vegetation and terrain. It highlights the importance of
-        pre- and post-event remote sensing data for understanding environmental change. This project
-        shows my skills in handling raster data, performing change detection, and applying remote sensing
-        methods for environmental monitoring.
+        This project demonstrates skills in remote sensing, raster analysis, and geospatial data visualization using Python. I applied tools such as xarray and rasterio to process multi-dimensional LiDAR data, built classified raster maps with custom colormaps, and used matplotlib for clear, professional plots. The analysis highlights my ability to translate raw LiDAR data into actionable environmental insights, while showcasing strong technical proficiency in GIS workflows, data quality assurance, and map production.
       </p>
+      <img class="slide-img" src="img/classified_lidar_chm.png" alt="Classified LiDAR canopy height model (CHM) difference visualization">
     </div>
   </section>
 

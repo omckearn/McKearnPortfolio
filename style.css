@@ -55,9 +55,14 @@ body{
 }
 .section-tabs .tabs-viewport{overflow-x:auto; scrollbar-width:thin; padding:.65rem 80px}
 .section-tabs ul{display:flex; gap:1.5rem; margin:0; padding:0; white-space:nowrap}
-.section-tabs a{color:var(--muted); text-decoration:none; white-space:nowrap; padding-bottom:3px; border-bottom:2px solid transparent; font-size:clamp(1rem, 1.9vw, 1.15rem)}
-.section-tabs a:hover{color:#fff}
-.section-tabs a.active{color:#e9eef5; border-bottom-color: var(--accent)}
+.section-tabs a{
+  color:var(--muted); text-decoration:none; white-space:nowrap; padding-bottom:3px; border-bottom:2px solid transparent; font-size:clamp(1rem, 1.9vw, 1.15rem);
+  background-image: linear-gradient(90deg, var(--accent-2), var(--accent));
+  background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 2px;
+  transition: color .2s ease, background-size .25s ease;
+}
+.section-tabs a:hover{color:#fff; background-size:100% 2px}
+.section-tabs a.active{color:#e9eef5; background-size:100% 2px}
 
 /* Tabs arrows */
 .tabs-arrow{
@@ -97,6 +102,10 @@ body{
 /* Sections */
 .section{padding:72px 0; background:var(--panel)}
 .section.alt{background:var(--panel-alt)}
+/* Visual dividers between sections */
+.section:not(:first-of-type){
+  border-top:1px solid var(--border);
+}
 .container{width:min(1100px, 92%); margin:0 auto}
 h2{font-size:clamp(1.4rem, 2.4vw, 2rem); margin:0 0 .75rem 0}
 h3{margin:1.25rem 0 .5rem 0}
@@ -104,8 +113,13 @@ p{margin:.5rem 0 1rem 0}
 ul,ol{margin:.5rem 0 1rem 1.25rem}
 ul.tight li, ol.tight li{margin:.25rem 0}
 
-.link{color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(76,195,255,.35); padding-bottom:2px}
-.link:hover{color:#fff; border-color:#fff}
+.link{
+  color:var(--accent); text-decoration:none; padding-bottom:2px;
+  background-image: linear-gradient(90deg, var(--accent-2), var(--accent));
+  background-repeat:no-repeat; background-position:0 100%; background-size:0% 2px;
+  transition: color .2s ease, background-size .25s ease;
+}
+.link:hover{color:#fff; background-size:100% 2px}
 
 /* About layout */
 .about-layout{display:grid; grid-template-columns: minmax(280px, 1fr) minmax(260px, .9fr); gap:2rem; align-items:start}
@@ -181,7 +195,9 @@ ul.tight li, ol.tight li{margin:.25rem 0}
   position:fixed; right:18px; bottom:18px; z-index:1000;
   display:none; padding:.6rem .7rem; border-radius:.6rem; border:1px solid var(--border);
   background:rgba(255,255,255,.05); color:var(--text); cursor:pointer; box-shadow: var(--shadow);
+  transition: background .2s ease, transform .15s ease;
 }
+.to-top:hover{ background:rgba(255,255,255,.12); transform: translateY(-2px); }
 
 /* Reveal on scroll */
 .reveal{opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease}
@@ -214,12 +230,35 @@ a:focus, button:focus{outline:2px solid var(--accent); outline-offset:2px}
 .slide-caption{margin:.5rem 0 0 0; color:var(--muted)}
 .slider-btn{
   position:absolute; top:50%; transform: translateY(-50%);
-  width:40px; height:40px; border-radius:50%; border:1px solid var(--border);
-  background: rgba(255,255,255,.08); color: var(--text); font-weight:800; cursor:pointer;
+  width:36px; height:36px; border-radius:50%; border:1px solid var(--border);
+  background:#fff; color:#0b0d10; cursor:pointer;
   display:grid; place-items:center; box-shadow: var(--shadow);
   z-index:5;
 }
 .slide-cover{position:absolute; inset:0; z-index:2; text-indent:-9999px}
-.slider-btn:hover{background: rgba(255,255,255,.14)}
+.slider-btn:hover{background:#f1f3f5}
 .slider-btn.prev{left:8px}
 .slider-btn.next{right:8px}
+
+/* Image rows (two-up gallery under DC Crime) */
+.image-row{display:grid; grid-template-columns: repeat(2, 1fr); gap:.75rem; margin:.75rem 0 1rem 0}
+@media (max-width: 760px){ .image-row{grid-template-columns:1fr} }
+.image-row img{width:100%; height:auto; border:1px solid var(--border); border-radius:12px; background:#0b0d10; box-shadow: var(--shadow)}
+
+/* Click-to-zoom lightbox */
+.zoomable{cursor: zoom-in}
+.lightbox{
+  position:fixed; inset:0; z-index:2000; display:none; align-items:center; justify-content:center;
+  background: rgba(0,0,0,.85); padding:16px;
+}
+.lightbox.open{display:flex}
+.lightbox-img{
+  max-width:92vw; max-height:92vh; border-radius:12px; border:1px solid var(--border);
+  box-shadow: var(--shadow); background:#0b0d10; object-fit:contain;
+}
+.lightbox-close{
+  position:absolute; top:14px; right:14px; width:36px; height:36px; border-radius:50%;
+  border:1px solid var(--border); background:#fff; color:#0b0d10; cursor:pointer;
+  display:grid; place-items:center; box-shadow: var(--shadow);
+}
+.lightbox-close:hover{background:#f1f3f5}

@@ -147,3 +147,39 @@ if (tabs) {
   prev && prev.addEventListener('click', scrollLeft);
   next && next.addEventListener('click', scrollRight);
 }
+
+// Click-to-zoom lightbox for images
+(function setupLightbox(){
+  // Create overlay once
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Expanded image');
+  overlay.innerHTML = '<button class="lightbox-close" aria-label="Close image">×</button><img class="lightbox-img" alt="">';
+  document.body.appendChild(overlay);
+
+  const imgEl = overlay.querySelector('.lightbox-img');
+  const closeBtn = overlay.querySelector('.lightbox-close');
+
+  const open = (src, alt) => {
+    imgEl.src = src;
+    imgEl.alt = alt || '';
+    overlay.classList.add('open');
+  };
+  const close = () => {
+    overlay.classList.remove('open');
+    imgEl.src = '';
+    imgEl.alt = '';
+  };
+
+  // Close interactions
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', (e) => { if (overlay.classList.contains('open') && e.key === 'Escape') close(); });
+
+  // Make any .zoomable images open in lightbox
+  document.querySelectorAll('img.zoomable').forEach(img => {
+    img.addEventListener('click', () => open(img.src, img.alt));
+  });
+})();
