@@ -3,39 +3,73 @@
   --panel: #111418;
   --panel-alt: #0f1317;
   --text: #e9eef5;
+  --heading: #ffffff;
   --muted: #a9b3c1;
-  --accent: #4cc3ff;
-  --accent-2: #71f4a1;
+  /* Unified accent color (deep blue‑green) */
+  --accent: #006d77;
+  --accent-2: #006d77;
   --border: #1a1f26;
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --titlebar-h: 56px;
 }
 
+/* Light theme overrides */
+.light-theme{
+  --bg: #f6f8fb;
+  --panel: #ffffff;
+  --panel-alt: #f6f8fb;
+  --text: #243040;
+  --heading: #0b0d10;
+  --muted: #5b6675;
+  --accent: #006d77; /* keep consistent accent */
+  --accent-2: #006d77;
+  --border: #dfe6ef;
+  --shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
 *{box-sizing:border-box}
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth; overflow-y:auto; height:auto}
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   background: linear-gradient(180deg, #0a0c10 0%, #0d1216 100%);
   color: var(--text);
-  line-height:1.6;
+  line-height:1.6; overflow-x:hidden; height:auto;
+}
+.light-theme body{} /* noop to satisfy cascade */
+
+/* Light theme background */
+.light-theme{
+  background: linear-gradient(180deg, #f5f8fc 0%, #eef3f9 100%);
 }
 
 /* Title bar */
 .site-header.title-bar{
   position:sticky; top:0; z-index:1100;
-  display:grid; grid-template-columns: 44px 1fr; align-items:center;
+  display:grid; grid-template-columns: 132px 1fr 44px 44px 44px; align-items:center;
   background:#fff;
   color:#0b0d10; height: var(--titlebar-h);
   padding:0 .75rem; border-bottom:1px solid var(--border);
 }
-.title-bar .title-text{ text-align:center; font-weight:700; opacity:.95; }
+.title-bar .title-text{ text-align:center; font-weight:800; opacity:.95; }
 .share-btn{
   width:36px; height:36px; border-radius:50%; border:1px solid var(--border); cursor:pointer; color:#0b0d10;
   background: rgba(0,0,0,.06); display:grid; place-items:center; margin-left:4px;
 }
 .share-btn:hover{ background: rgba(0,0,0,.12); }
+/* Theme toggle */
+.theme-toggle{
+  width:36px; height:36px; border-radius:50%; border:1px solid var(--border); cursor:pointer; color:#0b0d10;
+  background: rgba(0,0,0,.06); display:grid; place-items:center; margin-left:6px;
+}
+.theme-toggle:hover{ background: rgba(0,0,0,.12); }
+/* Drawer toggle in title bar (far right) */
+.drawer-toggle{
+  width:36px; height:36px; border-radius:50%; border:1px solid var(--border); cursor:pointer; color:#0b0d10;
+  background: rgba(0,0,0,.06); display:grid; place-items:center; margin-left:6px; justify-self:end;
+}
+.drawer-toggle:hover{ background: rgba(0,0,0,.12); }
 
 /* Legacy header nav bits (not used now, kept for compatibility) */
 .nav-toggle{
@@ -44,25 +78,32 @@ body{
 .nav-toggle .bar{display:block; width:24px; height:2px; background:var(--text); margin:5px 0; transition:.2s}
 .site-nav ul{display:flex; list-style:none; gap:.75rem; margin:0; padding:0}
 .site-nav a{display:inline-block; padding:.5rem .75rem; border-radius:.6rem; text-decoration:none; color:var(--muted); transition: color .2s, background .2s;}
-.site-nav a:hover{color:var(--text); background:rgba(255,255,255,.06)}
-.site-nav a.active{color:var(--text); background:rgba(113,244,161,.12); border:1px solid rgba(113,244,161,.25)}
+.site-nav a:hover{color:var(--text); background:rgba(255,255,255,.06); border-color: var(--accent)}
+.site-nav a.active{color:var(--text); background:rgba(0,109,119,.12); border:1px solid rgba(0,109,119,.35)}
 
 /* Section tabs (sticky below title) */
 .section-tabs{
   position:sticky; top: var(--titlebar-h); z-index:1050;
   background: rgba(11,13,16,.98);
   border-bottom:1px solid var(--border); border-top:1px solid var(--border);
+  overflow: visible;
 }
-.section-tabs .tabs-viewport{overflow-x:auto; scrollbar-width:thin; padding:.65rem 80px}
-.section-tabs ul{display:flex; gap:1.5rem; margin:0; padding:0; white-space:nowrap}
+.section-tabs .tabs-viewport{overflow-x:auto; overflow-y:hidden; scrollbar-width:thin; padding:.75rem 60px}
+.section-tabs ul{display:flex; gap:0; margin:0; padding:0; white-space:nowrap; list-style:none}
+/* Centered separators: equal space on both sides of the bar */
+.section-tabs li + li a{ border-left:1px solid var(--border); margin-left:.75rem; padding-left:.75rem }
 .section-tabs a{
+  display:inline-block;
   color:var(--muted); text-decoration:none; white-space:nowrap; padding-bottom:3px; border-bottom:2px solid transparent; font-size:clamp(1rem, 1.9vw, 1.15rem);
   background-image: linear-gradient(90deg, var(--accent-2), var(--accent));
   background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 2px;
-  transition: color .2s ease, background-size .25s ease;
+  transition: color .2s ease, background-size .25s ease, border-color .25s ease;
 }
-.section-tabs a:hover{color:#fff; background-size:100% 2px}
-.section-tabs a.active{color:#e9eef5; background-size:100% 2px}
+.section-tabs a:hover{color:#fff; background-size:100% 2px; border-color: var(--accent)}
+.section-tabs a.active{color:#e9eef5; background-size:100% 2px; border-color: var(--accent)}
+/* In light theme, keep tab text white on dark bar */
+.light-theme .section-tabs a{ color:#fff }
+.light-theme .section-tabs a.active{ color:#fff }
 
 /* Tabs arrows */
 .tabs-arrow{
@@ -71,12 +112,24 @@ body{
   background:#fff; color:#0b0d10; cursor:pointer; z-index:2;
   display:grid; place-items:center; box-shadow: var(--shadow);
 }
-.tabs-arrow:hover{background:#f1f3f5}
-.tabs-arrow.prev{left:8px}
-.tabs-arrow.next{right:8px}
+.tabs-arrow:hover{background:#f1f3f5; border-color: var(--accent)}
+/* Place arrows inside the tab bar with symmetric spacing */
+.tabs-arrow.prev{left:12px; transform: translateY(-50%); z-index:1}
+.tabs-arrow.next{right:12px; transform: translateY(-50%); z-index:1}
+/* Hide arrows when disabled */
+.tabs-arrow.is-disabled{ opacity:.35; pointer-events:none }
+
+/* Edge gradients to visually separate arrows from content */
+.section-tabs::before,
+.section-tabs::after{
+  content:""; position:absolute; top:0; bottom:0; width:48px; pointer-events:none; z-index:0;
+}
+.section-tabs::before{ left:0; background: linear-gradient(to right, var(--panel) 70%, transparent) }
+.section-tabs::after{ right:0; background: linear-gradient(to left, var(--panel) 70%, transparent) }
 
 /* Hero */
 .hero{
+  position:relative;
   min-height:68vh;
   display:grid; place-items:center;
   background:
@@ -88,33 +141,45 @@ body{
   background-position: center;
   border-bottom:1px solid var(--border);
 }
+/* Fade-in overlay to reveal hero background */
+.hero::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background: var(--panel);
+  opacity:1; animation: heroBgFade .9s ease-out .1s forwards;
+}
 .hero-inner{
-  text-align:center; padding:6rem 1rem 3rem 1rem; max-width:900px; margin-inline:auto;
+  text-align:center; padding:6.5rem 1rem 3.25rem 1rem; max-width:900px; margin-inline:auto;
+  animation: heroTextIn .7s ease-out both;
 }
 .hero h1{font-size:clamp(2rem, 3.8vw, 3.25rem); line-height:1.15; margin:0 0 .75rem 0}
+.light-theme .hero h1{ color:#fff }
 .hero p{color:#fff; margin:.25rem 0 1.5rem 0}
 .btn{
-  display:inline-block; padding:.8rem 1.1rem; border-radius:.8rem; font-weight:600; text-decoration:none;
+  display:inline-block; padding:.9rem 1.15rem; border-radius:.85rem; font-weight:700; text-decoration:none;
   background: linear-gradient(90deg, var(--accent-2), var(--accent));
-  color:#0b0d10; border:none; box-shadow: var(--shadow);
+  color:#fff; border:1px solid rgba(0,0,0,.0); box-shadow: var(--shadow);
 }
+.btn:hover{ filter: brightness(1.05); }
 
 /* Sections */
-.section{padding:72px 0; background:var(--panel)}
+.section{padding:84px 0; background:var(--panel)}
 .section.alt{background:var(--panel-alt)}
+/* Extra bottom padding for final section to avoid cutoff */
+.section:last-of-type{ padding-bottom: 120px; }
 /* Visual dividers between sections */
 .section:not(:first-of-type){
   border-top:1px solid var(--border);
 }
 .container{width:min(1100px, 92%); margin:0 auto}
-h2{font-size:clamp(1.4rem, 2.4vw, 2rem); margin:0 0 .75rem 0}
-h3{margin:1.25rem 0 .5rem 0}
-p{margin:.5rem 0 1rem 0}
+h1,h2,h3{font-weight:800; letter-spacing:.1px; color:var(--heading)}
+h2{font-size:clamp(1.6rem, 2.6vw, 2.1rem); margin:0 0 1rem 0}
+h3{font-size:clamp(1.15rem, 2vw, 1.35rem); margin:1.5rem 0 .75rem 0}
+p{margin:.5rem 0 1.1rem 0}
 ul,ol{margin:.5rem 0 1rem 1.25rem}
 ul.tight li, ol.tight li{margin:.25rem 0}
 
 .link{
-  color:var(--accent); text-decoration:none; padding-bottom:2px;
+  color:var(--accent); text-decoration:none; padding-bottom:2px; font-weight:600;
   background-image: linear-gradient(90deg, var(--accent-2), var(--accent));
   background-repeat:no-repeat; background-position:0 100%; background-size:0% 2px;
   transition: color .2s ease, background-size .25s ease;
@@ -141,7 +206,7 @@ ul.tight li, ol.tight li{margin:.25rem 0}
 }
 
 /* Embedded interactive frames */
-.embed{position:relative; margin:1rem 0}
+.embed{position:relative; margin:1.25rem 0 1.75rem 0}
 .embed-frame{
   width:100%;
   height:clamp(420px, 68vh, 900px);
@@ -189,6 +254,7 @@ ul.tight li, ol.tight li{margin:.25rem 0}
   text-align:center; padding:36px 16px; color:var(--muted); border-top:1px solid var(--border);
   background: #0b0d10;
 }
+.light-theme .site-footer{ background:#ffffff }
 
 /* Back to top */
 .to-top{
@@ -199,9 +265,33 @@ ul.tight li, ol.tight li{margin:.25rem 0}
 }
 .to-top:hover{ background:rgba(255,255,255,.12); transform: translateY(-2px); }
 
+.drawer{
+  position:fixed; top:0; right:0; height:100vh; width:min(320px, 86vw); z-index:1300;
+  background: var(--panel-alt); border-left:1px solid var(--border); box-shadow: var(--shadow);
+  transform: translateX(100%); transition: transform .25s cubic-bezier(0.25, 1, 0.5, 1);
+  padding:16px; overflow:auto;
+}
+.drawer.open{ transform: none }
+.drawer-nav ul{ list-style:none; margin:0; padding:0 }
+.drawer-nav li{ margin:.25rem 0 }
+.drawer-nav a{ display:block; padding:.55rem .5rem; text-decoration:none; color: var(--text); border-radius:.5rem }
+.drawer-nav a:hover{ background: rgba(255,255,255,.06) }
+
 /* Reveal on scroll */
+@keyframes fadeUp{ from{ opacity:0; transform: translateY(14px);} to{ opacity:1; transform:none; } }
 .reveal{opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease}
-.reveal.is-visible{opacity:1; transform:none}
+.reveal.is-visible{opacity:1; transform:none; animation: fadeUp .6s ease-out forwards}
+
+/* Hero intro animations */
+@keyframes heroBgFade { from{ opacity:1 } to{ opacity:0 } }
+@keyframes heroTextIn { from{ opacity:0; transform: translateY(8px)} to{ opacity:1; transform:none } }
+
+@media (prefers-reduced-motion: reduce){
+  *{scroll-behavior:auto}
+  .reveal, .reveal.is-visible{animation:none !important; transition:none !important; opacity:1; transform:none}
+  .hero::after{ animation:none !important; opacity:0 }
+  .hero-inner{ animation:none !important }
+}
 
 /* Responsive nav */
 @media (max-width: 960px){
@@ -221,7 +311,7 @@ ul.tight li, ol.tight li{margin:.25rem 0}
 a:focus, button:focus{outline:2px solid var(--accent); outline-offset:2px}
 
 /* Slider (certifications) */
-.slider{position:relative; margin-top:1rem}
+.slider{position:relative; margin:1.25rem 0 1.75rem 0}
 .slider-viewport{overflow:hidden; border-radius:12px}
 .slider-track{display:flex; transition: transform .35s ease}
 .slide{min-width:100%; position:relative}
@@ -241,7 +331,7 @@ a:focus, button:focus{outline:2px solid var(--accent); outline-offset:2px}
 .slider-btn.next{right:8px}
 
 /* Image rows (two-up gallery under DC Crime) */
-.image-row{display:grid; grid-template-columns: repeat(2, 1fr); gap:.75rem; margin:.75rem 0 1rem 0}
+.image-row{display:grid; grid-template-columns: repeat(2, 1fr); gap:.9rem; margin:1rem 0 1.5rem 0}
 @media (max-width: 760px){ .image-row{grid-template-columns:1fr} }
 .image-row img{width:100%; height:auto; border:1px solid var(--border); border-radius:12px; background:#0b0d10; box-shadow: var(--shadow)}
 
@@ -262,3 +352,5 @@ a:focus, button:focus{outline:2px solid var(--accent); outline-offset:2px}
   display:grid; place-items:center; box-shadow: var(--shadow);
 }
 .lightbox-close:hover{background:#f1f3f5}
+
+/* Light theme component tweaks (reverted) */
