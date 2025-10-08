@@ -83,7 +83,7 @@ body{
     linear-gradient(0deg, rgba(11,13,16,.45), rgba(11,13,16,.45)),
     radial-gradient(60% 40% at 70% 20%, rgba(113,244,161,.14), transparent 60%),
     radial-gradient(50% 35% at 20% 80%, rgba(76,195,255,.14), transparent 60%),
-    url('img/UWCampus-SuzzalloLibrary.jpg');
+    url('img/dc_3d_render.png');
   background-size: auto, auto, auto, cover;
   background-position: center;
   border-bottom:1px solid var(--border);
