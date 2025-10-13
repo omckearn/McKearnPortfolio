@@ -229,6 +229,14 @@ if (tabs) {
   window.addEventListener('resize', updateArrows);
   // Initial state after layout
   setTimeout(updateArrows, 0);
+
+  // Expose tabs height as CSS var for spacer
+  const setTabsHeightVar = () => {
+    const h = Math.ceil(tabs.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--tabs-h', h + 'px');
+  };
+  window.addEventListener('resize', setTabsHeightVar);
+  setTimeout(setTabsHeightVar, 0);
 }
 
 // Click-to-zoom lightbox for images
