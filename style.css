@@ -90,7 +90,8 @@ body{
   overflow: visible;
 }
 .section-tabs-spacer{ height: var(--tabs-h, 56px); }
-.section-tabs .tabs-viewport{overflow-x:auto; overflow-y:hidden; scrollbar-width:thin; padding:.75rem 60px}
+.section-tabs .tabs-viewport{overflow-x:auto; overflow-y:hidden; -ms-overflow-style:none; scrollbar-width:none; padding:.75rem 60px}
+.section-tabs .tabs-viewport::-webkit-scrollbar{display:none; width:0; height:0}
 .section-tabs ul{display:flex; gap:0; margin:0; padding:0; white-space:nowrap; list-style:none}
 /* Centered separators: equal space on both sides of the bar */
 .section-tabs li + li a{ border-left:1px solid var(--border); margin-left:.75rem; padding-left:.75rem }
