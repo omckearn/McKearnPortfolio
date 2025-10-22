@@ -53,6 +53,7 @@
         <li><a href="#about" class="active">About Me</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#dc-snap">DC SNAP Retailer Map</a></li>
+        <li><a href="#wildfire">Wildfire Severity Mapping</a></li>
         <li><a href="#sfd-911">Seattle 911 Dispatch Dashboard</a></li>
         <li><a href="#election">Election Story Map</a></li>
         <li><a href="#health">Health Equity Index of Seattle</a></li>
@@ -158,6 +159,23 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <p><a class="link" href="https://omckearn.github.io/DC_SNAP_Map/" target="_blank" rel="noopener">Open in a new tab</a></p>
+    </div>
+  </section>
+
+  <!-- Wildfire Severity Mapping -->
+  <section id="wildfire" class="section reveal full-bleed">
+    <div class="container">
+      <h2>Wildfire Burn Severity Mapping (Clear Fire, Alaska – 2024)</h2>
+      <p>
+        This project uses multispectral Sentinel-2 satellite imagery and a Random Forest classifier to map burn severity following the 2024 Clear Fire in Alaska. I built a full remote-sensing workflow that preprocesses imagery in Google Earth Engine, extracts vegetation and moisture indices, and applies a machine-learning model in Python to classify fire impacts at 10-meter resolution.
+      </p>
+      <p>
+        The model achieved near-perfect accuracy when reproducing USGS burn-severity classes based on the dNBR index, confirming correct data handling, spatial alignment, and classification logic. The project demonstrates skills in geospatial data processing, raster analysis, supervised classification, and cartographic design using tools such as Rasterio, Scikit-learn, QGIS, and GDAL.
+      </p>
+      <img class="slide-img zoomable" src="wildfire-severity/burn_severity_layout.png" alt="Wildfire Burn Severity Mapping (Clear Fire, Alaska – 2024) layout">
+      <p style="margin-top: .75rem">
+        <a class="link" href="https://github.com/omckearn/wildfire-severity" target="_blank" rel="noopener">View the repository for technical details</a>
+      </p>
     </div>
   </section>
 
@@ -505,6 +523,7 @@
         <li><a href="#about">About Me</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#dc-snap">DC SNAP Retailer Map</a></li>
+        <li><a href="#wildfire">Wildfire Severity Mapping</a></li>
         <li><a href="#sfd-911">Seattle 911 Dispatch Dashboard</a></li>
         <li><a href="#election">Election Story Map</a></li>
         <li><a href="#health">Health Equity Index of Seattle</a></li>
