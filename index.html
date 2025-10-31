@@ -54,6 +54,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#dc-snap">DC SNAP Retailer Map</a></li>
         <li><a href="#wildfire">Wildfire Severity Mapping</a></li>
+        <li><a href="#ukraine-ntl">Ukraine Nighttime Lights</a></li>
         <li><a href="#sfd-911">Seattle 911 Dispatch Dashboard</a></li>
         <li><a href="#election">Election Story Map</a></li>
         <li><a href="#health">Health Equity Index of Seattle</a></li>
@@ -176,6 +177,63 @@
       <p style="margin-top: .75rem">
         <a class="link" href="https://github.com/omckearn/wildfire-_severity" target="_blank" rel="noopener">View the repository for technical details</a>
       </p>
+    </div>
+  </section>
+
+  <!-- Ukraine Nighttime Lights -->
+  <section id="ukraine-ntl" class="section alt reveal full-bleed">
+    <div class="container">
+      <h2>Nighttime Light Change Analysis: Ukraine Conflict (2021–2024)</h2>
+      <p>
+        This analysis used VIIRS Day/Night Band (DNB) data within Google Earth Engine to detect changes in nighttime light intensity across Ukraine and nearby regions before and after the onset of the war. Monthly composites were generated for February 2021, 2022, 2023, and 2024, and radiance values were differenced to visualize temporal change.
+      </p>
+
+      <div class="slider" aria-roledescription="carousel" aria-label="Ukraine Nighttime Lights change maps">
+        <button class="slider-btn prev" aria-label="Previous image" type="button">‹</button>
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <article class="slide">
+              <img class="slide-img zoomable" src="img/UKR_NTL/feb2021-feb2022.png" alt="Nighttime lights change: Feb 2021 to Feb 2022">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="img/UKR_NTL/feb2021-feb2024.png" alt="Nighttime lights change: Feb 2021 to Feb 2024">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="img/UKR_NTL/feb2023-2024.png" alt="Nighttime lights change: Feb 2023 to Feb 2024">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="img/UKR_NTL/july%202024-sep2024.png" alt="Nighttime lights change: July 2024 to Sep 2024">
+            </article>
+          </div>
+        </div>
+        <button class="slider-btn next" aria-label="Next image" type="button">›</button>
+      </div>
+
+      <h3>Methodology</h3>
+      <ul class="tight">
+        <li>Imported VIIRS Nighttime Lights (VNP46A2) dataset.</li>
+        <li>Filtered images by month and year (Feb 2021–Feb 2024).</li>
+        <li>Applied cloud and stray light masking.</li>
+        <li>Computed mean radiance per month, then subtracted earlier from later periods to produce change layers.</li>
+      </ul>
+      <p>Visualized results with a diverging color scheme:</p>
+      <ul class="tight">
+        <li><strong>Blue</strong> = decrease in nightlight (indicating population displacement, infrastructure damage, or power loss).</li>
+        <li><strong>Red</strong> = increase in nightlight (indicating reconstruction, industrial growth, or intensified activity).</li>
+      </ul>
+
+      <h3>Findings</h3>
+      <p>
+        Significant nightlight reductions appear across eastern and southern Ukraine, especially around Mariupol, Donetsk, and Kherson, consistent with areas heavily affected by the conflict. Increased illumination is visible near Rostov-on-Don and Krasnodar, suggesting regional economic or logistical shifts following the war.
+      </p>
+
+      <h3>Tools and Skills Demonstrated</h3>
+      <ul class="tight">
+        <li>Google Earth Engine JavaScript API</li>
+        <li>Raster differencing and compositing</li>
+        <li>Temporal change detection and color mapping</li>
+        <li>Spatial interpretation of socio-economic disruption</li>
+      </ul>
     </div>
   </section>
 
@@ -524,6 +582,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#dc-snap">DC SNAP Retailer Map</a></li>
         <li><a href="#wildfire">Wildfire Severity Mapping</a></li>
+        <li><a href="#ukraine-ntl">Ukraine Nighttime Lights</a></li>
         <li><a href="#sfd-911">Seattle 911 Dispatch Dashboard</a></li>
         <li><a href="#election">Election Story Map</a></li>
         <li><a href="#health">Health Equity Index of Seattle</a></li>
