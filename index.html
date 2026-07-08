@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Owen McKearn – Data Visualization and Mapping Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Portfolio of Owen McKearn, geospatial data scientist. Projects in web mapping, remote sensing, and spatial analysis." />
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="img/favicons/site.webmanifest" />
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" />
+  <meta name="application-name" content="Owen McKearn" />
+  <meta name="apple-mobile-web-app-title" content="Owen McKearn" />
+  <meta name="theme-color" content="#0b0d10" />
+</head>
+<body>
+  <!-- Title Bar -->
+  <header class="site-header title-bar">
+    <div class="title-spacer" aria-hidden="true"></div>
+    <div class="title-text">Owen McKearn – Data Visualization and Mapping Portfolio</div>
+    <button id="share-btn" class="share-btn" aria-label="Share this page" title="Share" aria-pressed="false">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 3v11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M8.5 6.5L12 3l3.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 10H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-6a3 3 0 0 0-3-3h-1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme" aria-pressed="false">🌙</button>
+    <button id="drawer-toggle" class="drawer-toggle" aria-label="Open quick navigation" title="Open quick navigation" aria-expanded="false">☰</button>
+  </header>
+  <div class="title-bar-spacer" aria-hidden="true"></div>
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="hero-inner">
+      <h1>Data Visualization and Mapping Portfolio</h1>
+      <p>Web mapping. Remote sensing. Spatial analysis. Clear results.</p>
+      <a class="btn" href="#about">Explore</a>
+    </div>
+  </section>
+
+  <!-- Section Tabs (sticky under title, sits at bottom of the hero on load) -->
+  <nav class="section-tabs" aria-label="Section navigation">
+    <div class="tabs-viewport">
+      <ul>
+        <li><a href="#about" class="active">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certs">GIS Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="section-tabs-spacer" aria-hidden="true"></div>
+
+  <!-- About -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-layout">
+        <div class="about-text">
+          <p>
+            I’m a geospatial analyst and CAD/GIS technician specializing in applied GIS, utility mapping, and spatial data automation. I currently work at ATCO Communications, where I translate construction work prints and as-built drawings into enterprise GIS systems (IQGeo) to support fiber and utility network planning and asset management. My work spans ArcGIS, CAD, and Python, including spatial data cleaning and transformation, automated geoprocessing workflows, and the development of custom dashboards and internal tools using ArcGIS Experience Builder. I collaborate closely with engineers and project teams to design practical, production-ready GIS solutions and generate accurate workprints that support real-world infrastructure projects.
+          </p>
+          <p>
+            Previously, I interned on the enterprise GIS team at Freeport-McMoRan, where I worked on remote sensing initiatives across land management, imagery, and LiDAR workflows. I maintain a strong interest in building scalable, data-driven geospatial tools, with a broader focus on turning complex spatial data into clear, usable systems through automation, web mapping, and decision-support applications
+          </p>
+
+          <div class="contact-cards">
+            <a class="card" href="https://www.linkedin.com/in/owen-mckearn-b69a54251/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="card" href="mailto:omckearn@gmail.com">Email: omckearn@gmail.com</a>
+            <a class="card" href="tel:+12024228090">Mobile: 202-422-8090</a>
+            <a class="card" href="https://drive.google.com/file/d/1sFNE8hhSeobPmeOmanjAbQDylFt8wQIZ/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+          </div>
+        </div>
+        <div class="about-media">
+          <img class="about-photo" src="img/headshot.JPG" alt="Headshot of Owen McKearn">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section reveal">
+    <div class="container">
+      <h2>Experience</h2>
+      <h3>GIS Technician, Matrix Design Group</h3>
+      <p>Currently working as a GIS Technician at Matrix Design Group, supporting day-to-day GIS operations including basic Esri/ArcGIS data work and field data collection using ArcGIS Field Maps.</p>
+      <h3>CAD/GIS Technician, ATCO Communications</h3>
+      <p>Support fiber and utility network mapping by interpreting construction work prints and as-built drawings and translating them into enterprise GIS systems (IQGeo). Work across ArcGIS, CAD, and Python to clean, transform, and manage spatial data, build custom dashboards and internal tools using ArcGIS Experience Builder, and develop automated geoprocessing workflows to improve data quality and production efficiency. Collaborate closely with engineers and project teams to design custom GIS solutions, generate workprints, and deliver accurate, production-ready geospatial data that supports planning, construction, and asset management.</p>
+      <h3>Freelance GIS Consultant</h3>
+      <p>Provide geospatial consulting services, including data engineering, spatial analysis, and interactive web mapping. Experienced in collaborating with clients, scoping projects, and delivering tailored GIS solutions. Created the <a class="link" href="#dc-snap">DC SNAP Map</a> for the George Washington University Global Food Institute to support food access analysis.</p>
+      <h3>GIS Analyst Intern, Freeport-McMoRan</h3>
+      <p>
+        During my internship with the Enterprise GIS Team at Freeport‑McMoRan, I worked on high‑impact projects that improved data accuracy, accessibility, and visualization across multiple sites. These experiences strengthened my technical skills in spatial data management, automation, and cartographic storytelling while supporting enterprise‑level decision‑making.
+      </p>
+      <h3>Key Projects</h3>
+      <ul class="tight">
+        <li><strong>PTFI Time‑Enabled Imagery Mosaic</strong> – Built a dynamic, time‑enabled mosaic dataset for the PTFI site, complete with optimized overviews and trimming. This tool allows teams to monitor tailings over time, directly supporting environmental stewardship and regulatory compliance. I also developed Python scripts to automate conversion of raw TIFFs into cloud‑optimized formats, dramatically improving imagery performance for the Tailings team.</li>
+        <li><strong>Bagdad Story Map</strong> – Co‑developed an ArcGIS StoryMap for the Director of Land, synthesizing deeds, leases, water exchange deals, and spatial data into a compelling narrative with embedded maps and animations. This high‑level communication tool showcased the long‑term value of land and water investments and was prepared for presentation at the Land and Water Summit.</li>
+        <li><strong>Utility Infrastructure Digitization (City of Ajo)</strong> – Digitized critical infrastructure, including sewer taps, fire hydrants, and power lines, from PDF diagrams into GIS. Uploaded to the enterprise portal, this data improved accessibility and reliability for city utility operations, maintenance, and planning.</li>
+        <li><strong>Enterprise Mining Claims Dataset</strong> – Reviewed, validated, and cleaned more than 13,000 unpatented mining claims by cross‑referencing Bureau of Land Management records, deeds, and legal filings. Created a centralized, cloud‑hosted “single source of truth” dataset that supports exploration, permitting, legal, and land management teams across the company.</li>
+        <li><strong>Portal Item Cleanup & Feature Digitization</strong> – Conducted system‑wide cleanup of outdated portal items and digitized CAD/PDF features for enterprise upload, ensuring streamlined data management and accessibility across teams.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <h2 class="projects-title">Projects</h2>
+      <p class="projects-subhead">A selection of GIS, remote sensing, and web mapping projects that demonstrate my approach to spatial data analysis, automation, and clear communication.</p>
+    </div>
+  </section>
+
+  <!-- Food Impact Meter -->
+  <section id="food-impact-meter" class="section alt reveal full-bleed">
+    <div class="container">
+      <h2>Food Impact Meter</h2>
+      <p>
+        I worked with the team at the National Food Museum to help develop the Food Impact Meter, an
+        interactive web tool that lets visitors explore the broader impacts of everyday food choices.
+      </p>
+      <div class="embed interact">
+        <button class="embed-guard" aria-label="Click to interact with this site"><span class="embed-guard-label">Click to interact</span></button>
+        <iframe
+          class="embed-frame"
+          src="https://www.nationalfoodmuseum.org/food-impact-meter/"
+          title="Food Impact Meter"
+          loading="lazy"
+          allow="fullscreen"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p><a class="link" href="https://www.nationalfoodmuseum.org/food-impact-meter/" target="_blank" rel="noopener">Open in a new tab</a></p>
+    </div>
+  </section>
+
+  <!-- DC SNAP Map -->
+  <section id="dc-snap" class="section reveal full-bleed">
+    <div class="container">
+      <h2>SNAP Retailers Map (Washington, D.C.)</h2>
+      <p>
+        This project is an interactive web map built with Mapbox GL JS, Turf.js, and custom HTML/CSS/JavaScript,
+        showcasing Supplemental Nutrition Assistance Program (SNAP) retailers across Washington, D.C. Using data
+        from the <a class="link" href="https://www.fns.usda.gov/snap/retailer-locator" target="_blank" rel="noopener">USDA SNAP Retailer Locator</a>,
+        I designed the map to allow users to explore food access visually through filters for store type and ward
+        boundaries, dynamic legends, and color-coded markers. Each store is represented by a unique symbol and color,
+        and clicking reveals detailed information with options to copy the address or generate walking directions via
+        Google Maps. I implemented clustering to manage dense data points, a DC boundary mask for geographic focus,
+        and ward selection both from dropdown menus and interactive map clicks.
+      </p>
+      <p>
+        Beyond visualization, I developed features that highlight my front-end and geospatial problem-solving skills.
+        The “Near Me” panel integrates geolocation, search, and map-pick functionality to return the nearest retailer
+        by type with real-time distance calculations, demonstrating proficiency with geospatial analysis in the browser.
+        I also built user-friendly UI elements such as a responsive filters panel, onboarding modal, and
+        accessibility-minded popups styled with custom CSS. This project exemplifies my ability to combine spatial data
+        acquisition, interactive mapping libraries, and thoughtful design to create tools that communicate complex datasets
+        in an intuitive, impactful way.
+      </p>
+      <div class="embed interact">
+        <button class="embed-guard" aria-label="Click to interact with this map"><span class="embed-guard-label">Click to interact</span></button>
+        <iframe
+          class="embed-frame"
+          src="https://omckearn.github.io/DC_SNAP_Map/"
+          title="DC SNAP Retailers Map"
+          loading="lazy"
+          allow="fullscreen"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p><a class="link" href="https://omckearn.github.io/DC_SNAP_Map/" target="_blank" rel="noopener">Open in a new tab</a></p>
+    </div>
+  </section>
+
+  <!-- Wildfire Severity Mapping -->
+  <section id="wildfire" class="section reveal full-bleed">
+    <div class="container">
+      <h2>Wildfire Burn Severity Mapping (Clear Fire, Alaska – 2024)</h2>
+      <p>
+        This project uses multispectral Sentinel-2 satellite imagery and a Random Forest classifier to map burn severity following the 2024 Clear Fire in Alaska. I built a full remote-sensing workflow that preprocesses imagery in Google Earth Engine, extracts vegetation and moisture indices, and applies a machine-learning model in Python to classify fire impacts at 10-meter resolution.
+      </p>
+      <p>
+        The model achieved near-perfect accuracy when reproducing USGS burn-severity classes based on the dNBR index, confirming correct data handling, spatial alignment, and classification logic. The project demonstrates skills in geospatial data processing, raster analysis, supervised classification, and cartographic design using tools such as Rasterio, Scikit-learn, QGIS, and GDAL.
+      </p>
+      <img class="slide-img zoomable" src="wildfire-severity/burn_severity_layout.png" alt="Wildfire Burn Severity Mapping (Clear Fire, Alaska – 2024) layout">
+      <p style="margin-top: .75rem">
+        <a class="link" href="https://github.com/omckearn/wildfire-_severity" target="_blank" rel="noopener">View the repository for technical details</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Ukraine Nighttime Lights -->
+  <section id="ukraine-ntl" class="section alt reveal full-bleed">
+    <div class="container">
+      <h2>Nighttime Light Change Analysis: Ukraine Conflict (2021–2024)</h2>
+      <p>
+        This analysis used VIIRS Day/Night Band (DNB) data within Google Earth Engine to detect changes in nighttime light intensity across Ukraine and nearby regions before and after the onset of the war. Monthly composites were generated for February 2021, 2022, 2023, and 2024, and radiance values were differenced to visualize temporal change.
+      </p>
+
+      <div class="slider" aria-roledescription="carousel" aria-label="Ukraine Nighttime Lights change maps">
+        <button class="slider-btn prev" aria-label="Previous image" type="button">‹</button>
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <article class="slide">
+              <img class="slide-img zoomable" src="img/UKR_NTL/feb2021-feb2022.png" alt="Nighttime lights change: Feb 2021 to Feb 2022">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="img/UKR_NTL/feb2021-feb2024.png" alt="Nighttime lights change: Feb 2021 to Feb 2024">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="img/UKR_NTL/feb2023-2024.png" alt="Nighttime lights change: Feb 2023 to Feb 2024">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="img/UKR_NTL/july%202024-sep2024.png" alt="Nighttime lights change: July 2024 to Sep 2024">
+            </article>
+          </div>
+        </div>
+        <button class="slider-btn next" aria-label="Next image" type="button">›</button>
+      </div>
+
+      <h3>Methodology</h3>
+      <ul class="tight">
+        <li>Imported VIIRS Nighttime Lights (VNP46A2) dataset.</li>
+        <li>Filtered images by month and year (Feb 2021–Feb 2024).</li>
+        <li>Applied cloud and stray light masking.</li>
+        <li>Computed mean radiance per month, then subtracted earlier from later periods to produce change layers.</li>
+      </ul>
+      <p>Visualized results with a diverging color scheme:</p>
+      <ul class="tight">
+        <li><strong>Blue</strong> = decrease in nightlight (indicating population displacement, infrastructure damage, or power loss).</li>
+        <li><strong>Red</strong> = increase in nightlight (indicating reconstruction, industrial growth, or intensified activity).</li>
+      </ul>
+
+      <h3>Findings</h3>
+      <p>
+        Significant nightlight reductions appear across eastern and southern Ukraine, especially around Mariupol, Donetsk, and Kherson, consistent with areas heavily affected by the conflict. Increased illumination is visible near Rostov-on-Don and Krasnodar, suggesting regional economic or logistical shifts following the war.
+      </p>
+
+      <h3>Tools and Skills Demonstrated</h3>
+      <ul class="tight">
+        <li>Google Earth Engine JavaScript API</li>
+        <li>Raster differencing and compositing</li>
+        <li>Temporal change detection and color mapping</li>
+        <li>Spatial interpretation of socio-economic disruption</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Seattle 911 -->
+  <section id="sfd-911" class="section alt reveal full-bleed">
+    <div class="container">
+      <h2>911 Dispatch Dashboard</h2>
+      <p>
+        This interactive web app shows Seattle Fire Department 911 dispatches from the past 24 hours.
+        It combines real-time open data with ACS demographic layers to highlight spatial patterns.
+        I built the project using Mapbox GL JS and designed features such as multiple basemap styles,
+        thematic overlays for census tracts, a dual-thumb timeline slider that filters incidents by hour,
+        toggle options for dot density and heatmap views, interactive popups, a custom pie chart,
+        and an interactive legend.
+      </p>
+      <p>
+        I developed the full front end, including dynamic filtering, geospatial styling, and responsive UI.
+        This project highlights my skills in web mapping, data integration, and user-focused visualizations.
+      </p>
+      <div class="embed interact">
+        <button class="embed-guard" aria-label="Click to interact with this map"><span class="embed-guard-label">Click to interact</span></button>
+        <iframe
+          class="embed-frame"
+          src="https://omckearn.github.io/sea911dashboard/"
+          title="911 Dispatch Dashboard"
+          loading="lazy"
+          allow="fullscreen"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p><a class="link" href="https://omckearn.github.io/sea911dashboard/" target="_blank" rel="noopener">Open in a new tab</a></p>
+    </div>
+  </section>
+
+  <!-- Election -->
+  <section id="election" class="section reveal full-bleed">
+    <div class="container">
+      <h2>Election Map</h2>
+      <p>
+        This project visualizes the 2024 election results with a StoryMap built using HTML, CSS, and
+        JavaScript on the Mapbox platform. I prepared the data by scraping and analyzing CSV files in
+        Pandas and Geopandas, then joined them with shapefiles to build spatial datasets.
+      </p>
+      <p>
+        The design and coding of the map show how programming and geospatial technology can turn
+        complex election data into a tool that is easy to explore. Users can interact with the results at
+        both the neighborhood and citywide levels, making the data more accessible and meaningful.
+      </p>
+      <div class="embed interact">
+        <button class="embed-guard" aria-label="Click to interact with this map"><span class="embed-guard-label">Click to interact</span></button>
+        <iframe
+          class="embed-frame"
+          src="https://omckearn.github.io/24_election_night_storymap/"
+          title="Election Map"
+          loading="lazy"
+          allow="fullscreen"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p><a class="link" href="https://omckearn.github.io/2024_election_story_map/" target="_blank" rel="noopener">Open in a new tab</a></p>
+    </div>
+  </section>
+
+  <!-- Health Equity -->
+  <section id="health" class="section alt reveal">
+    <div class="container">
+      <h2>Health Equity Index of Seattle</h2>
+      <p>This project maps health equity in Seattle using a composite index of five metrics:</p>
+      <ul class="tight">
+        <li>Adult diabetes rates</li>
+        <li>Adult asthma rates</li>
+        <li>Life expectancy at birth</li>
+        <li>Adult disability rates</li>
+        <li>Health insurance coverage</li>
+      </ul>
+      <p>
+        I analyzed 2017–2021 data by census tract in ArcGIS Pro to reveal disparities. The analysis shows
+        that neighborhoods such as Rainier Valley and southern Delridge face poorer health outcomes,
+        while areas like Montlake and Ballard perform better.
+      </p>
+      <p>
+        The project shows how GIS can guide public health planning by showing where resources are most
+        needed. These maps can support non-profits and government agencies in targeting interventions in
+        underserved communities.
+      </p>
+      <div class="slider" aria-roledescription="carousel" aria-label="Seattle Health Equity maps">
+        <button class="slider-btn prev" aria-label="Previous image" type="button">‹</button>
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/1Health_2_Z%20Layout.jpeg.jpg" alt="Seattle health equity map 1">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/2Health_5_Z%20Layout.jpeg.jpg" alt="Seattle health equity map 2">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/3Health_6_Z%20Layout.jpeg.jpg" alt="Seattle health equity map 3">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/4Health_7_Z%20Layout.jpeg.jpg" alt="Seattle health equity map 4">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/5Health_8_Z%20Layout.jpeg.jpg" alt="Seattle health equity map 5">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/6Custom%20Index%20Layout.jpeg.jpg" alt="Seattle health equity map 6">
+            </article>
+            <article class="slide">
+              <img class="slide-img zoomable" src="healthIndex/7Weighted%20Index%20Layout.jpeg.jpg" alt="Seattle health equity map 7">
+            </article>
+          </div>
+        </div>
+        <button class="slider-btn next" aria-label="Next image" type="button">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DC Crime -->
+  <section id="dc-crime" class="section reveal full-bleed">
+    <div class="container">
+      <h2>D.C. Crime</h2>
+      <p>
+        This project explores patterns of crime in Washington, D.C. using publicly available data from the city’s Open Data Portal. I cleaned and processed incident-level records, then built an interactive web map in ArcGIS Online that allows users to zoom into neighborhoods, filter by category, and view spatial patterns at both the citywide and block level. The web map demonstrates how open data and web GIS can provide accessible insight into public safety trends.
+      </p>
+      <p>
+        To complement the interactive map, I also produced two cartographic layouts in ArcGIS Pro. The first is a proportional symbol map, where circle sizes represent the number of incidents by location, making it easy to compare concentrations across the city. The second is a choropleth map that aggregates incidents by neighborhood boundaries, providing a normalized view of crime density and distribution. Together, these products highlight my ability to combine web GIS tools with traditional cartography, ensuring that the analysis is both interactive and publication-ready.
+      </p>
+      <p>
+        This project demonstrates skills in data acquisition, cleaning, and visualization across multiple GIS platforms. By using both ArcGIS Online and ArcGIS Pro, I show how spatial data can be tailored to different audiences: decision-makers who need high-level summaries and community members who benefit from an interactive way to explore crime data.
+      </p>
+      <div class="image-row" aria-label="D.C. Crime static maps">
+        <img class="zoomable" src="dcCrime/CrimeChoropleth.jpg" alt="D.C. crime choropleth map">
+        <img class="zoomable" src="dcCrime/crimeProport.jpg" alt="D.C. crime proportional symbol map">
+      </div>
+      <div class="embed interact">
+        <button class="embed-guard" aria-label="Click to interact with this map"><span class="embed-guard-label">Click to interact</span></button>
+        <iframe
+          class="embed-frame"
+          src="https://uw.maps.arcgis.com/apps/mapviewer/index.html?webmap=312df0ac0d564cf4a50f5c45f0c651b6"
+          title="D.C. Crime – ArcGIS Online Map Viewer"
+          loading="lazy"
+          allow="fullscreen"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p><a class="link" href="https://uw.maps.arcgis.com/apps/mapviewer/index.html?webmap=312df0ac0d564cf4a50f5c45f0c651b6" target="_blank" rel="noopener">Open in a new tab</a></p>
+    </div>
+  </section>
+
+  <!-- Poverty -->
+  <section id="poverty" class="section alt reveal">
+    <div class="container">
+      <h2>Poverty in King County</h2>
+      <p>
+        This project analyzes poverty in King County and measures data reliability using the CDC Social
+        Vulnerability Index ACS Toolbox.
+      </p>
+      <h3>Maps created</h3>
+      <ol class="tight">
+        <li><strong>Population Below 150% of Poverty Level</strong>: Choropleth map showing estimated percentages by census tract.</li>
+        <li><strong>Coefficient of Variation for Poverty Estimates</strong>: Diverging scheme that highlights low, moderate, and high variability.</li>
+      </ol>
+      <h3>Process</h3>
+      <ul class="tight">
+        <li>Used ACS data through the CDC SVI dataset</li>
+        <li>Calculated poverty percentages in ArcGIS Pro</li>
+        <li>Measured reliability with the CV Calculator</li>
+      </ul>
+      <h3>Key insights</h3>
+      <ul class="tight">
+        <li>Higher concentrations of poverty appear in urban areas near Seattle</li>
+        <li>Some tracts show higher variability, so users should be careful with interpretation</li>
+      </ul>
+      <p>
+        This work links quantitative analysis with clear mapping. It shows not just where poverty is
+        concentrated, but also how reliable the estimates are.
+      </p>
+      <object data="seaPov/KCPoverty.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="King County Poverty map PDF"></object>
+      <p class="slide-caption"><a class="link" href="seaPov/KCPoverty.pdf" target="_blank" rel="noopener">Open full PDF</a></p>
+    </div>
+  </section>
+
+  <!-- DTM / Remote Sensing -->
+  <section id="dtm" class="section reveal">
+    <div class="container">
+      <h2>Digital Terrain Model</h2>
+      <p>
+        I processed pre- and post-flood LiDAR datasets to evaluate changes in canopy height and terrain elevation, applying raster differencing to identify areas most impacted by flooding. The workflow involved generating canopy height models (CHMs) and digital terrain models (DTMs), validating coordinate systems and resolutions, and ensuring data quality by checking for null values. I then created difference rasters, plotted histograms to guide classification, and visualized spatial patterns of canopy loss, terrain shifts, and potential flood damage.
+      </p>
+      <p>
+        This project demonstrates skills in remote sensing, raster analysis, and geospatial data visualization using Python. I applied tools such as xarray and rasterio to process multi-dimensional LiDAR data, built classified raster maps with custom colormaps, and used matplotlib for clear, professional plots. The analysis highlights my ability to translate raw LiDAR data into actionable environmental insights, while showcasing strong technical proficiency in GIS workflows, data quality assurance, and map production.
+      </p>
+      <img class="slide-img" src="img/classified_lidar_chm.png" alt="Classified LiDAR canopy height model (CHM) difference visualization">
+    </div>
+  </section>
+
+  
+
+  <!-- Kent Fire Department Incident Analysis -->
+  <section id="kent-fire" class="section alt reveal">
+    <div class="container">
+      <h2>Kent Fire Department Incident Analysis</h2>
+      <p>
+        To better understand patterns in emergency service demand, I analyzed Kent Fire Department’s 2016 incident
+        records using GIS. The workflow began by cleaning and geocoding the raw call data to ensure accurate spatial
+        representation of incidents across the service boundary. Once validated, I separated incidents into meaningful
+        categories such as structure fires, hazmat, rescue/EMS, and service calls. This allowed for focused analysis on
+        different operational demands. Kernel density estimation and contour mapping were then applied to reveal spatial
+        concentrations of responses, providing clear visualization of where resources were most heavily utilized.
+      </p>
+      <p>
+        In addition to density mapping, I created category-specific heatmaps to compare distributions across emergency
+        types. For example, Rescue/EMS responses showed broad, high-density coverage across residential areas, while
+        structure fire incidents clustered more tightly around central Kent and Covington. By integrating cartographic
+        techniques such as contour intervals, symbology, and grid values, the maps illustrate patterns while also
+        quantifying incident density per square mile. This project highlights my ability to combine data processing,
+        spatial analysis, and effective visualization to support decision making in public safety resource allocation.
+      </p>
+
+      <div class="slider" aria-roledescription="carousel" aria-label="Kent Fire Department maps">
+        <button class="slider-btn prev" aria-label="Previous image" type="button">‹</button>
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <article class="slide">
+              <img class="slide-img" src="img/kentFD/allResponses.jpg" alt="All incident responses – kernel density and contours">
+            </article>
+            <article class="slide">
+              <img class="slide-img" src="img/kentFD/structureFires.jpg" alt="Structure fires – density and contours">
+            </article>
+            <article class="slide">
+              <img class="slide-img" src="img/kentFD/fireExplosionHazmat.jpg" alt="Fire, explosion, and hazmat – density and contours">
+            </article>
+            <article class="slide">
+              <img class="slide-img" src="img/kentFD/rescueEMS.jpg" alt="Rescue and EMS – density and contours">
+            </article>
+            <article class="slide">
+              <img class="slide-img" src="img/kentFD/serviceCallsOther.jpg" alt="Service calls and other – density and contours">
+            </article>
+          </div>
+        </div>
+        <button class="slider-btn next" aria-label="Next image" type="button">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="section reveal">
+    <div class="container">
+      <h2>GIS Certifications</h2>
+      <p class="muted" style="color: var(--muted); margin:.25rem 0 1rem 0">All certificates (click to view):</p>
+      <ul class="tight" style="columns: 2; column-gap: 1.5rem; padding-left:1.25rem">
+        <li>FAA Part 107 Remote Pilot (sUAS) — authorized for commercial small UAS operations</li>
+        <li><a class="link" href="img/certs/ArcGIS%20Survey123%20Basics_Certificate_05122025.pdf" target="_blank" rel="noopener">ArcGIS Survey123 Basics</a></li>
+        <li><a class="link" href="img/certs/Data%20Science%20Workflows%20Using%20ArcGIS%20Notebooks_Certificate_05132025.pdf" target="_blank" rel="noopener">Data Science Workflows Using ArcGIS Notebooks</a></li>
+        <li><a class="link" href="img/certs/Downscaling%20a%20Prediction%20Model%20Using%20ArcGIS%20Notebooks%20and%20ArcGIS%20Pro_Certificate_05142025.pdf" target="_blank" rel="noopener">Downscaling a Prediction Model Using ArcGIS Notebooks and ArcGIS Pro</a></li>
+        <li><a class="link" href="img/certs/Getting%20Started%20with%20Data%20Management_Certificate_05122025.pdf" target="_blank" rel="noopener">Getting Started with Data Management</a></li>
+        <li><a class="link" href="img/certs/Getting%20Started%20with%20Imagery%20and%20Remote%20Sensing_Certificate_05142025.pdf" target="_blank" rel="noopener">Getting Started with Imagery and Remote Sensing</a></li>
+        <li><a class="link" href="img/certs/Getting%20Started%20with%20the%20Geodatabase_Certificate_05132025.pdf" target="_blank" rel="noopener">Getting Started with the Geodatabase</a></li>
+        <li><a class="link" href="img/certs/Introduction%20to%20Data%20Engineering_Certificate_05122025.pdf" target="_blank" rel="noopener">Introduction to Data Engineering</a></li>
+        <li><a class="link" href="img/certs/Introduction%20to%20Image%20Classification_Certificate_05142025.pdf" target="_blank" rel="noopener">Introduction to Image Classification</a></li>
+        <li><a class="link" href="img/certs/Introduction%20to%20Regression%20Analysis%20Using%20ArcGIS%20Pro_Certificate_05142025.pdf" target="_blank" rel="noopener">Introduction to Regression Analysis Using ArcGIS Pro</a></li>
+        <li><a class="link" href="img/certs/Python%20Scripting_%20Modifying%20Layer%20Properties_Certificate_05142025.pdf" target="_blank" rel="noopener">Python Scripting: Modifying Layer Properties</a></li>
+        <li><a class="link" href="img/certs/Python%20Scripting_%20Repairing%20Data%20Sources_Certificate_05142025.pdf" target="_blank" rel="noopener">Python Scripting: Repairing Data Sources</a></li>
+        <li><a class="link" href="img/certs/Python%20for%20Everyone_Certificate_05132025.pdf" target="_blank" rel="noopener">Python for Everyone</a></li>
+      </ul>
+      <div class="slider" aria-roledescription="carousel" aria-label="GIS certificates">
+        <button class="slider-btn prev" aria-label="Previous certificate" type="button">‹</button>
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <article class="slide">
+              <object data="img/certs/ArcGIS%20Survey123%20Basics_Certificate_05122025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="ArcGIS Survey123 Basics certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/ArcGIS%20Survey123%20Basics_Certificate_05122025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Data%20Science%20Workflows%20Using%20ArcGIS%20Notebooks_Certificate_05132025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Data Science Workflows Using ArcGIS Notebooks certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Data%20Science%20Workflows%20Using%20ArcGIS%20Notebooks_Certificate_05132025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Downscaling%20a%20Prediction%20Model%20Using%20ArcGIS%20Notebooks%20and%20ArcGIS%20Pro_Certificate_05142025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Downscaling a Prediction Model Using ArcGIS Notebooks and ArcGIS Pro certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Downscaling%20a%20Prediction%20Model%20Using%20ArcGIS%20Notebooks%20and%20ArcGIS%20Pro_Certificate_05142025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Getting%20Started%20with%20Data%20Management_Certificate_05122025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Getting Started with Data Management certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Getting%20Started%20with%20Data%20Management_Certificate_05122025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Getting%20Started%20with%20Imagery%20and%20Remote%20Sensing_Certificate_05142025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Getting Started with Imagery and Remote Sensing certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Getting%20Started%20with%20Imagery%20and%20Remote%20Sensing_Certificate_05142025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Getting%20Started%20with%20the%20Geodatabase_Certificate_05132025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Getting Started with the Geodatabase certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Getting%20Started%20with%20the%20Geodatabase_Certificate_05132025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Introduction%20to%20Data%20Engineering_Certificate_05122025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Introduction to Data Engineering certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Introduction%20to%20Data%20Engineering_Certificate_05122025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Introduction%20to%20Image%20Classification_Certificate_05142025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Introduction to Image Classification certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Introduction%20to%20Image%20Classification_Certificate_05142025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Introduction%20to%20Regression%20Analysis%20Using%20ArcGIS%20Pro_Certificate_05142025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Introduction to Regression Analysis Using ArcGIS Pro certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Introduction%20to%20Regression%20Analysis%20Using%20ArcGIS%20Pro_Certificate_05142025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Python%20Scripting_%20Modifying%20Layer%20Properties_Certificate_05142025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Python Scripting: Modifying Layer Properties certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Python%20Scripting_%20Modifying%20Layer%20Properties_Certificate_05142025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Python%20Scripting_%20Repairing%20Data%20Sources_Certificate_05142025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Python Scripting: Repairing Data Sources certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Python%20Scripting_%20Repairing%20Data%20Sources_Certificate_05142025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+            <article class="slide">
+              <object data="img/certs/Python%20for%20Everyone_Certificate_05132025.pdf#view=FitH" type="application/pdf" class="slide-doc" aria-label="Python for Everyone certificate"></object>
+              <p class="slide-caption"><a class="link" href="img/certs/Python%20for%20Everyone_Certificate_05132025.pdf" target="_blank" rel="noopener">Open full certificate</a></p>
+            </article>
+          </div>
+        </div>
+        <button class="slider-btn next" aria-label="Next certificate" type="button">›</button>
+      </div>
+      <p style="color: var(--muted); margin-top:.5rem">Tip: click a slide to open the PDF in a new tab.</p>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <section id="contact" class="section alt reveal">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>
+        I am open to new roles and to freelance work. If you want to talk about a project or a position,
+        please reach out.
+      </p>
+      <div class="contact-cards">
+        <a class="card" href="https://www.linkedin.com/in/owen-mckearn-b69a54251/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="card" href="mailto:omckearn@gmail.com">Email: omckearn@gmail.com</a>
+        <a class="card" href="tel:+12024228090">Mobile: 202-422-8090</a>
+      </div>
+    </div>
+  </section>
+
+  <button id="to-top" class="to-top" aria-label="Back to top">↑</button>
+
+  <!-- Drawer sidebar -->
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <nav class="drawer-nav" aria-label="Quick navigation">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certs">GIS Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Owen McKearn. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
