@@ -3,12 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Owen McKearn – Data Visualization and Mapping Portfolio</title>
+  <title>Owen McKearn | GIS Analyst &amp; CAD/GIS Technician Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Portfolio of Owen McKearn, geospatial data scientist. Projects in web mapping, remote sensing, and spatial analysis." />
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Owen McKearn is a GIS analyst and CAD/GIS technician based in the U.S., working across ArcGIS, utility mapping, remote sensing, and web-based spatial tools. Browse project work, experience, and contact info." />
+  <meta name="author" content="Owen McKearn" />
+  <link rel="canonical" href="https://omckearn.github.io/McKearnPortfolio/" />
+
+  <!-- Open Graph / Facebook, LinkedIn, etc. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Owen McKearn Portfolio" />
+  <meta property="og:title" content="Owen McKearn | GIS Analyst &amp; CAD/GIS Technician" />
+  <meta property="og:description" content="GIS analyst and CAD/GIS technician specializing in utility mapping, remote sensing, and interactive web maps. See project work and get in touch." />
+  <meta property="og:url" content="https://omckearn.github.io/McKearnPortfolio/" />
+  <meta property="og:image" content="https://omckearn.github.io/McKearnPortfolio/img/headshot.JPG" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Owen McKearn | GIS Analyst &amp; CAD/GIS Technician" />
+  <meta name="twitter:description" content="GIS analyst and CAD/GIS technician specializing in utility mapping, remote sensing, and interactive web maps." />
+  <meta name="twitter:image" content="https://omckearn.github.io/McKearnPortfolio/img/headshot.JPG" />
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Owen McKearn",
+    "url": "https://omckearn.github.io/McKearnPortfolio/",
+    "image": "https://omckearn.github.io/McKearnPortfolio/img/headshot.JPG",
+    "jobTitle": "GIS Technician",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Matrix Design Group"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/owen-mckearn-b69a54251/"
+    ]
+  }
+  </script>
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png" />
@@ -39,8 +77,7 @@
   <!-- Hero -->
   <section id="top" class="hero">
     <div class="hero-inner">
-      <h1>Data Visualization and Mapping Portfolio</h1>
-      <p>Web mapping. Remote sensing. Spatial analysis. Clear results.</p>
+      <h1>Owen McKearn — Data Visualization &amp; Mapping Portfolio</h1>
       <a class="btn" href="#about">Explore</a>
     </div>
   </section>
@@ -66,10 +103,10 @@
       <div class="about-layout">
         <div class="about-text">
           <p>
-            I’m a geospatial analyst and CAD/GIS technician specializing in applied GIS, utility mapping, and spatial data automation. I currently work at ATCO Communications, where I translate construction work prints and as-built drawings into enterprise GIS systems (IQGeo) to support fiber and utility network planning and asset management. My work spans ArcGIS, CAD, and Python, including spatial data cleaning and transformation, automated geoprocessing workflows, and the development of custom dashboards and internal tools using ArcGIS Experience Builder. I collaborate closely with engineers and project teams to design practical, production-ready GIS solutions and generate accurate workprints that support real-world infrastructure projects.
+            I'm a young GIS professional just starting my career. I enjoy building apps and dashboards that automate everyday processes and working hands-on with spatial data. If you'd like to connect, feel free to reach out by email.
           </p>
           <p>
-            Previously, I interned on the enterprise GIS team at Freeport-McMoRan, where I worked on remote sensing initiatives across land management, imagery, and LiDAR workflows. I maintain a strong interest in building scalable, data-driven geospatial tools, with a broader focus on turning complex spatial data into clear, usable systems through automation, web mapping, and decision-support applications
+            I graduated in March 2025 and have since worked with Freeport-McMoRan and ATCO Communications. I'm currently working at Matrix Design Group as a GIS Technician.
           </p>
 
           <div class="contact-cards">
@@ -94,17 +131,27 @@
       <p>Currently working as a GIS Technician at Matrix Design Group, supporting day-to-day GIS operations including basic Esri/ArcGIS data work and field data collection using ArcGIS Field Maps.</p>
       <h3>CAD/GIS Technician, ATCO Communications</h3>
       <p>Support fiber and utility network mapping by interpreting construction work prints and as-built drawings and translating them into enterprise GIS systems (IQGeo). Work across ArcGIS, CAD, and Python to clean, transform, and manage spatial data, build custom dashboards and internal tools using ArcGIS Experience Builder, and develop automated geoprocessing workflows to improve data quality and production efficiency. Collaborate closely with engineers and project teams to design custom GIS solutions, generate workprints, and deliver accurate, production-ready geospatial data that supports planning, construction, and asset management.</p>
+      <h3>Key Projects</h3>
+      <ul class="tight">
+        <li><strong>Custom ArcGIS Online Utility Locate Widget</strong> – Designed and built a custom AGOL Experience Builder widget that gives field engineers an interactive, zoom-enabled interface for locating and reviewing utility infrastructure. The tool allows users to toggle layer visibility for right-of-way, pipe, and sewer data alongside company fiber and copper facilities, giving engineers a single, configurable view of overlapping utility networks. Users can also draw a capture extent directly on the map, which automatically generates a block page workprint for that area, ready for markup and annotation. This streamlined a previously manual export process into a self-service tool that improved turnaround time on engineering requests.</li>
+        <li><strong>Project Tracking Dashboard</strong> – Helped design and maintain a dashboard used to track the progress and status of a key infrastructure project. Coordinated directly with field engineers and project managers to keep site locations and status updates current, and contributed design decisions and new features, such as improved filtering and status views, to make the dashboard more useful for day-to-day project coordination.</li>
+        <li><strong>Workprint and As-Built Reconciliation</strong> – Reviewed construction workprints and as-built drawings in IQGeo and Rulis to verify that enterprise GIS records accurately reflected as-built field conditions. Cross-referenced supporting documentation and other internal data sources as needed to resolve discrepancies, ensuring the utility network data used for planning and engineering remained accurate and up to date.</li>
+      </ul>
       <h3>Freelance GIS Consultant</h3>
-      <p>Provide geospatial consulting services, including data engineering, spatial analysis, and interactive web mapping. Experienced in collaborating with clients, scoping projects, and delivering tailored GIS solutions. Created the <a class="link" href="#dc-snap">DC SNAP Map</a> for the George Washington University Global Food Institute to support food access analysis.</p>
+      <p>Provide geospatial consulting services, including data engineering, spatial analysis, and interactive web mapping. Experienced in collaborating with clients, scoping projects, and delivering tailored GIS solutions.</p>
+      <h3>Key Projects</h3>
+      <ul class="tight">
+        <li><strong><a class="link" href="#dc-snap">SNAP Retailers Map</a></strong> – Built an interactive Mapbox GL JS web map of SNAP retailers across Washington, D.C. for the George Washington University Global Food Institute. The tool lets users filter by store type and ward, view real-time distances to the nearest retailer, and explore food access patterns across the city.</li>
+        <li><strong><a class="link" href="https://www.nationalfoodmuseum.org/food-impact-meter/" target="_blank" rel="noopener">Food Impact Meter</a></strong> – Helped develop an interactive web app for the National Food Museum that generates a personalized summary of how a user's diet affects their health and the environment. Learn more <a class="link" href="https://www.nationalfoodmuseum.org/food-impact-meter/" target="_blank" rel="noopener">here</a>.</li>
+      </ul>
       <h3>GIS Analyst Intern, Freeport-McMoRan</h3>
       <p>
-        During my internship with the Enterprise GIS Team at Freeport‑McMoRan, I worked on high‑impact projects that improved data accuracy, accessibility, and visualization across multiple sites. These experiences strengthened my technical skills in spatial data management, automation, and cartographic storytelling while supporting enterprise‑level decision‑making.
+        During my internship with the Enterprise GIS Team at Freeport‑McMoRan, I worked on high‑impact projects that improved data accuracy, accessibility, and visualization across multiple sites.
       </p>
       <h3>Key Projects</h3>
       <ul class="tight">
-        <li><strong>PTFI Time‑Enabled Imagery Mosaic</strong> – Built a dynamic, time‑enabled mosaic dataset for the PTFI site, complete with optimized overviews and trimming. This tool allows teams to monitor tailings over time, directly supporting environmental stewardship and regulatory compliance. I also developed Python scripts to automate conversion of raw TIFFs into cloud‑optimized formats, dramatically improving imagery performance for the Tailings team.</li>
-        <li><strong>Bagdad Story Map</strong> – Co‑developed an ArcGIS StoryMap for the Director of Land, synthesizing deeds, leases, water exchange deals, and spatial data into a compelling narrative with embedded maps and animations. This high‑level communication tool showcased the long‑term value of land and water investments and was prepared for presentation at the Land and Water Summit.</li>
-        <li><strong>Utility Infrastructure Digitization (City of Ajo)</strong> – Digitized critical infrastructure, including sewer taps, fire hydrants, and power lines, from PDF diagrams into GIS. Uploaded to the enterprise portal, this data improved accessibility and reliability for city utility operations, maintenance, and planning.</li>
+        <li><strong>PTFI Time‑Enabled Imagery Mosaic</strong> – Using ArcPy, automated the conversion of raw TIFFs into cloud-optimized imagery with automatic overviews and trimming, enabling site teams to efficiently monitor tailings over time.</li>
+        <li><strong>Bagdad Story Map</strong> – Developed an ArcGIS StoryMap for company leadership, synthesizing land and water deals into a compelling narrative with embedded maps and animations for presentation at the Land and Water Summit.</li>
         <li><strong>Enterprise Mining Claims Dataset</strong> – Reviewed, validated, and cleaned more than 13,000 unpatented mining claims by cross‑referencing Bureau of Land Management records, deeds, and legal filings. Created a centralized, cloud‑hosted “single source of truth” dataset that supports exploration, permitting, legal, and land management teams across the company.</li>
         <li><strong>Portal Item Cleanup & Feature Digitization</strong> – Conducted system‑wide cleanup of outdated portal items and digitized CAD/PDF features for enterprise upload, ensuring streamlined data management and accessibility across teams.</li>
       </ul>
@@ -146,23 +193,20 @@
     <div class="container">
       <h2>SNAP Retailers Map (Washington, D.C.)</h2>
       <p>
-        This project is an interactive web map built with Mapbox GL JS, Turf.js, and custom HTML/CSS/JavaScript,
-        showcasing Supplemental Nutrition Assistance Program (SNAP) retailers across Washington, D.C. Using data
+        An interactive web map built with Mapbox GL JS, Turf.js, and custom HTML/CSS/JavaScript, showing
+        Supplemental Nutrition Assistance Program (SNAP) retailers across Washington, D.C. Using data
         from the <a class="link" href="https://www.fns.usda.gov/snap/retailer-locator" target="_blank" rel="noopener">USDA SNAP Retailer Locator</a>,
-        I designed the map to allow users to explore food access visually through filters for store type and ward
+        I designed the map so users can explore food access visually through filters for store type and ward
         boundaries, dynamic legends, and color-coded markers. Each store is represented by a unique symbol and color,
         and clicking reveals detailed information with options to copy the address or generate walking directions via
         Google Maps. I implemented clustering to manage dense data points, a DC boundary mask for geographic focus,
         and ward selection both from dropdown menus and interactive map clicks.
       </p>
       <p>
-        Beyond visualization, I developed features that highlight my front-end and geospatial problem-solving skills.
-        The “Near Me” panel integrates geolocation, search, and map-pick functionality to return the nearest retailer
-        by type with real-time distance calculations, demonstrating proficiency with geospatial analysis in the browser.
-        I also built user-friendly UI elements such as a responsive filters panel, onboarding modal, and
-        accessibility-minded popups styled with custom CSS. This project exemplifies my ability to combine spatial data
-        acquisition, interactive mapping libraries, and thoughtful design to create tools that communicate complex datasets
-        in an intuitive, impactful way.
+        The "Near Me" panel integrates geolocation, search, and map-pick functionality to return the nearest
+        retailer by type with real-time distance calculations. I also built a responsive filters panel,
+        an onboarding modal, and accessibility-minded popups styled with custom CSS — combining spatial
+        data, mapping libraries, and interface design into something that's actually easy to use.
       </p>
       <div class="embed interact">
         <button class="embed-guard" aria-label="Click to interact with this map"><span class="embed-guard-label">Click to interact</span></button>
@@ -183,7 +227,7 @@
     <div class="container">
       <h2>Wildfire Burn Severity Mapping (Clear Fire, Alaska – 2024)</h2>
       <p>
-        This project uses multispectral Sentinel-2 satellite imagery and a Random Forest classifier to map burn severity following the 2024 Clear Fire in Alaska. I built a full remote-sensing workflow that preprocesses imagery in Google Earth Engine, extracts vegetation and moisture indices, and applies a machine-learning model in Python to classify fire impacts at 10-meter resolution.
+        Multispectral Sentinel-2 satellite imagery and a Random Forest classifier, used to map burn severity following the 2024 Clear Fire in Alaska. I built a full remote-sensing workflow that preprocesses imagery in Google Earth Engine, extracts vegetation and moisture indices, and applies a machine-learning model in Python to classify fire impacts at 10-meter resolution.
       </p>
       <p>
         The model achieved near-perfect accuracy when reproducing USGS burn-severity classes based on the dNBR index, confirming correct data handling, spatial alignment, and classification logic. The project demonstrates skills in geospatial data processing, raster analysis, supervised classification, and cartographic design using tools such as Rasterio, Scikit-learn, QGIS, and GDAL.
@@ -192,63 +236,6 @@
       <p style="margin-top: .75rem">
         <a class="link" href="https://github.com/omckearn/wildfire-_severity" target="_blank" rel="noopener">View the repository for technical details</a>
       </p>
-    </div>
-  </section>
-
-  <!-- Ukraine Nighttime Lights -->
-  <section id="ukraine-ntl" class="section alt reveal full-bleed">
-    <div class="container">
-      <h2>Nighttime Light Change Analysis: Ukraine Conflict (2021–2024)</h2>
-      <p>
-        This analysis used VIIRS Day/Night Band (DNB) data within Google Earth Engine to detect changes in nighttime light intensity across Ukraine and nearby regions before and after the onset of the war. Monthly composites were generated for February 2021, 2022, 2023, and 2024, and radiance values were differenced to visualize temporal change.
-      </p>
-
-      <div class="slider" aria-roledescription="carousel" aria-label="Ukraine Nighttime Lights change maps">
-        <button class="slider-btn prev" aria-label="Previous image" type="button">‹</button>
-        <div class="slider-viewport">
-          <div class="slider-track">
-            <article class="slide">
-              <img class="slide-img zoomable" src="img/UKR_NTL/feb2021-feb2022.png" alt="Nighttime lights change: Feb 2021 to Feb 2022">
-            </article>
-            <article class="slide">
-              <img class="slide-img zoomable" src="img/UKR_NTL/feb2021-feb2024.png" alt="Nighttime lights change: Feb 2021 to Feb 2024">
-            </article>
-            <article class="slide">
-              <img class="slide-img zoomable" src="img/UKR_NTL/feb2023-2024.png" alt="Nighttime lights change: Feb 2023 to Feb 2024">
-            </article>
-            <article class="slide">
-              <img class="slide-img zoomable" src="img/UKR_NTL/july%202024-sep2024.png" alt="Nighttime lights change: July 2024 to Sep 2024">
-            </article>
-          </div>
-        </div>
-        <button class="slider-btn next" aria-label="Next image" type="button">›</button>
-      </div>
-
-      <h3>Methodology</h3>
-      <ul class="tight">
-        <li>Imported VIIRS Nighttime Lights (VNP46A2) dataset.</li>
-        <li>Filtered images by month and year (Feb 2021–Feb 2024).</li>
-        <li>Applied cloud and stray light masking.</li>
-        <li>Computed mean radiance per month, then subtracted earlier from later periods to produce change layers.</li>
-      </ul>
-      <p>Visualized results with a diverging color scheme:</p>
-      <ul class="tight">
-        <li><strong>Blue</strong> = decrease in nightlight (indicating population displacement, infrastructure damage, or power loss).</li>
-        <li><strong>Red</strong> = increase in nightlight (indicating reconstruction, industrial growth, or intensified activity).</li>
-      </ul>
-
-      <h3>Findings</h3>
-      <p>
-        Significant nightlight reductions appear across eastern and southern Ukraine, especially around Mariupol, Donetsk, and Kherson, consistent with areas heavily affected by the conflict. Increased illumination is visible near Rostov-on-Don and Krasnodar, suggesting regional economic or logistical shifts following the war.
-      </p>
-
-      <h3>Tools and Skills Demonstrated</h3>
-      <ul class="tight">
-        <li>Google Earth Engine JavaScript API</li>
-        <li>Raster differencing and compositing</li>
-        <li>Temporal change detection and color mapping</li>
-        <li>Spatial interpretation of socio-economic disruption</li>
-      </ul>
     </div>
   </section>
 
@@ -265,8 +252,7 @@
         and an interactive legend.
       </p>
       <p>
-        I developed the full front end, including dynamic filtering, geospatial styling, and responsive UI.
-        This project highlights my skills in web mapping, data integration, and user-focused visualizations.
+        I built the full front end myself, including the dynamic filtering, geospatial styling, and responsive layout.
       </p>
       <div class="embed interact">
         <button class="embed-guard" aria-label="Click to interact with this map"><span class="embed-guard-label">Click to interact</span></button>
@@ -282,39 +268,11 @@
     </div>
   </section>
 
-  <!-- Election -->
-  <section id="election" class="section reveal full-bleed">
-    <div class="container">
-      <h2>Election Map</h2>
-      <p>
-        This project visualizes the 2024 election results with a StoryMap built using HTML, CSS, and
-        JavaScript on the Mapbox platform. I prepared the data by scraping and analyzing CSV files in
-        Pandas and Geopandas, then joined them with shapefiles to build spatial datasets.
-      </p>
-      <p>
-        The design and coding of the map show how programming and geospatial technology can turn
-        complex election data into a tool that is easy to explore. Users can interact with the results at
-        both the neighborhood and citywide levels, making the data more accessible and meaningful.
-      </p>
-      <div class="embed interact">
-        <button class="embed-guard" aria-label="Click to interact with this map"><span class="embed-guard-label">Click to interact</span></button>
-        <iframe
-          class="embed-frame"
-          src="https://omckearn.github.io/24_election_night_storymap/"
-          title="Election Map"
-          loading="lazy"
-          allow="fullscreen"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <p><a class="link" href="https://omckearn.github.io/2024_election_story_map/" target="_blank" rel="noopener">Open in a new tab</a></p>
-    </div>
-  </section>
-
   <!-- Health Equity -->
   <section id="health" class="section alt reveal">
     <div class="container">
       <h2>Health Equity Index of Seattle</h2>
-      <p>This project maps health equity in Seattle using a composite index of five metrics:</p>
+      <p>This project maps health equity in Seattle using a composite index built from five metrics:</p>
       <ul class="tight">
         <li>Adult diabetes rates</li>
         <li>Adult asthma rates</li>
@@ -369,13 +327,10 @@
     <div class="container">
       <h2>D.C. Crime</h2>
       <p>
-        This project explores patterns of crime in Washington, D.C. using publicly available data from the city’s Open Data Portal. I cleaned and processed incident-level records, then built an interactive web map in ArcGIS Online that allows users to zoom into neighborhoods, filter by category, and view spatial patterns at both the citywide and block level. The web map demonstrates how open data and web GIS can provide accessible insight into public safety trends.
+        An exploration of crime patterns in Washington, D.C. using publicly available data from the city's Open Data Portal. I cleaned and processed incident-level records, then built an interactive web map in ArcGIS Online that lets users zoom into neighborhoods, filter by category, and view spatial patterns at both the citywide and block level.
       </p>
       <p>
-        To complement the interactive map, I also produced two cartographic layouts in ArcGIS Pro. The first is a proportional symbol map, where circle sizes represent the number of incidents by location, making it easy to compare concentrations across the city. The second is a choropleth map that aggregates incidents by neighborhood boundaries, providing a normalized view of crime density and distribution. Together, these products highlight my ability to combine web GIS tools with traditional cartography, ensuring that the analysis is both interactive and publication-ready.
-      </p>
-      <p>
-        This project demonstrates skills in data acquisition, cleaning, and visualization across multiple GIS platforms. By using both ArcGIS Online and ArcGIS Pro, I show how spatial data can be tailored to different audiences: decision-makers who need high-level summaries and community members who benefit from an interactive way to explore crime data.
+        To complement the interactive map, I also produced two cartographic layouts in ArcGIS Pro: a proportional symbol map, where circle sizes represent the number of incidents by location, and a choropleth map that aggregates incidents by neighborhood boundaries for a normalized view of crime density. Between the two, you get both an at-a-glance overview and a way to dig into specifics.
       </p>
       <div class="image-row" aria-label="D.C. Crime static maps">
         <img class="zoomable" src="dcCrime/CrimeChoropleth.jpg" alt="D.C. crime choropleth map">
@@ -436,7 +391,7 @@
         I processed pre- and post-flood LiDAR datasets to evaluate changes in canopy height and terrain elevation, applying raster differencing to identify areas most impacted by flooding. The workflow involved generating canopy height models (CHMs) and digital terrain models (DTMs), validating coordinate systems and resolutions, and ensuring data quality by checking for null values. I then created difference rasters, plotted histograms to guide classification, and visualized spatial patterns of canopy loss, terrain shifts, and potential flood damage.
       </p>
       <p>
-        This project demonstrates skills in remote sensing, raster analysis, and geospatial data visualization using Python. I applied tools such as xarray and rasterio to process multi-dimensional LiDAR data, built classified raster maps with custom colormaps, and used matplotlib for clear, professional plots. The analysis highlights my ability to translate raw LiDAR data into actionable environmental insights, while showcasing strong technical proficiency in GIS workflows, data quality assurance, and map production.
+        I used tools like xarray and rasterio to process the multi-dimensional LiDAR data, built classified raster maps with custom colormaps, and used matplotlib for the final plots — turning raw LiDAR into a clear read on where canopy and terrain changed most.
       </p>
       <img class="slide-img" src="img/classified_lidar_chm.png" alt="Classified LiDAR canopy height model (CHM) difference visualization">
     </div>
@@ -449,7 +404,7 @@
     <div class="container">
       <h2>Kent Fire Department Incident Analysis</h2>
       <p>
-        To better understand patterns in emergency service demand, I analyzed Kent Fire Department’s 2016 incident
+        To better understand patterns in emergency service demand, I analyzed Kent Fire Department's 2016 incident
         records using GIS. The workflow began by cleaning and geocoding the raw call data to ensure accurate spatial
         representation of incidents across the service boundary. Once validated, I separated incidents into meaningful
         categories such as structure fires, hazmat, rescue/EMS, and service calls. This allowed for focused analysis on
@@ -459,10 +414,8 @@
       <p>
         In addition to density mapping, I created category-specific heatmaps to compare distributions across emergency
         types. For example, Rescue/EMS responses showed broad, high-density coverage across residential areas, while
-        structure fire incidents clustered more tightly around central Kent and Covington. By integrating cartographic
-        techniques such as contour intervals, symbology, and grid values, the maps illustrate patterns while also
-        quantifying incident density per square mile. This project highlights my ability to combine data processing,
-        spatial analysis, and effective visualization to support decision making in public safety resource allocation.
+        structure fire incidents clustered more tightly around central Kent and Covington. Contour intervals, symbology,
+        and grid values were layered on top to show incident density per square mile alongside the broader spatial patterns.
       </p>
 
       <div class="slider" aria-roledescription="carousel" aria-label="Kent Fire Department maps">
